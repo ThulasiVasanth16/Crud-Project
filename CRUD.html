@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CRUD.css" />
+    <title>New Employee Form</title>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h2>EMPLOYEE NEXUS</h2>
+      <form>
+        <div class="form-group">
+          <div id="photo">
+            <div><img id="photoId" class="inputField" src="girl.png" /></div>
+            <input
+              type="file"
+              name="image"
+              id="uploadButton"
+              style="display: none"
+            />
+           <div> <label id="uploadBtn" for="uploadButton" style="cursor: pointer">
+              <p>Upload *</p>
+            </label>
+            <!-- <span id="imageError" class="inputField">1</span> -->
+             <label id="userProfilePhotoError" class="error"></label></div>
+          </div>
+          <div class="item">
+            <!-- placeholder="Enter a Name *" -->
+            <input
+              type="text"
+              id="name"
+              class="inputField userData"
+              required
+              autofocus
+            />
+            <!-- <span id="nameError" class="inputField">3</span> -->
+             <label id="userNameError" class="error"></label>
+          </div>
+          <div class="item">
+            <select id="company" class="inputField" aria-placeholder="Company" required>
+              <option value="" disabled selected>Select a Company *</option>
+              <option value="Virdhi Tech Company">Virdhi Tech Company</option>
+              <option value="Zepic Company">Zepic Company</option>
+              <option value="Freshworks Company">Freshworks Company</option>
+              <option value="Zoho Company">Zoho Company</option>
+              <option value="SalesForce Company">SalesForce Company</option>
+              <option value="Walmart Company">Walmart Company</option>
+            </select>
+            <!-- <span id="companyError" class="inputField">4</span> -->
+             <label id="userCompanyNameError" class="error"></label>
+          </div>
+          <div class="item">
+            <!-- placeholder="Designation *" -->
+            <input type="text" id="designation" class="inputField userData"  required/>
+            <!-- <span id="designationError" class="inputField">5</span> -->
+             <label id="userDesignationError" class="error"></label>
+          </div>
+          <div class="item">
+            <!-- placeholder="Personal Number *" -->
+            <input
+              type="number"
+              id="phoneNumber"
+              class="inputField userData"
+              onkeydown="avoidKey(event,10)"
+              required
+            />
+            <!-- <span id="numberError" class="inputField">6</span> -->
+            <label id="userMobileNoError" class="error"></label>
+          </div>
+          <div class="item">
+            <select id="country" required>
+              <option value="" disabled selected>Select Country *</option>
+            </select>
+            <!-- <span id="countryError" class="inputField">2</span> -->
+
+            <label id="userCountryError" class="error"></label>
+          </div>
+          <div class="item">
+            <select id="state">
+              <option value="" disabled selected>Select State</option>
+            </select>
+            <!-- <span style="visibility: hidden">state</span> -->
+             <label id="userStateError" class="error"></label>
+          </div>
+          <div class="item">
+            <!-- placeholder="Address *" -->
+            <textarea
+              rows="10"
+              cols="165"
+              id="address"
+              class="inputField userData"
+              required
+            ></textarea>
+            <!-- <span id="addressError" class="inputField">7</span> -->
+             <label  id="userAddressError" class="error"></label>
+          </div>
+          <div class="item">
+            <!-- placeholder="Email *" -->
+            <input
+              type="email"
+              id="email"
+              class="inputField userData"
+              required
+            />
+            <!-- <span id="mailError" class="inputField">8</span> -->
+             <label  id="userEmailError" class="error"></label>
+          </div>
+          <div class="item">
+            <!-- placeholder="Pin Code *" -->
+            <input
+              type="number"
+              id="pinCode"
+              class="inputField userData"
+              onkeydown="avoidKey(event,6)"
+              required
+            />
+            <!-- <span id="pinError" class="inputField">9</span> -->
+             <label id="userPinCodeError" class="error"></label>
+
+          </div>
+        </div>
+        <!-- <h3>Social Media</h3>
+        <div class="form-url">
+          <div id="url">
+            placeholder="LinkedIn URL"
+            <input type="url" id="linkedIn" class="inputField userData" />
+            placeholder="Facebook URL"
+            <input type="url" id="faceBook" class="inputField userData" />
+          </div>
+          <div id="url">
+            placeholder="Twitter URL"
+            <input type="url" id="twitter" class="inputField userData" />
+            placeholder="Instagram URL"
+            <input type="url" id="instagram" class="inputField userData" />
+          </div>
+        </div> -->
+        <div class="form-actions">
+          <button type="button" class="submit-btn" id="actionButton">
+            Register
+          </button>
+          <button type="button" class="cancel-btn" id="reset">Reset</button>
+        </div>
+      </form>
+
+      <div id="resultTable" class="inputField"></div>
+    </div>
+    <script src="CRUD.js"></script>
+  </body>
+</html>
